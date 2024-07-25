@@ -8,12 +8,36 @@ header {
     justify-content: center;
 }
 
-.mycards {
-    width: 1200px;
-    margin: 0px auto 30px auto;
+.warp {
+    background-color: aqua;
 }
 
-h1 {
+.mycards {
+    margin: 30px auto 30px auto;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    background-color: white;
+}
+
+img {
+    width: auto;
+    height: 500px;
+    /* object-fit: cover; */
+
+}
+
+.mycards>div {
+    margin: 30px;
+}
+
+.title {
     color: white;
 }
 
