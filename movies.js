@@ -16,10 +16,44 @@ fetch(url, options)
     .then(response => console.log(response))
     .then(data => {
         // 이후 데이터 처리
-        // 데이터를 불러와서 카드 리스트에 뿌려야 되지 않을까..?
         // 필요한 데이터: 제목, 줄거리, 포스터 이미지 경로, 평점
-        // let title = data['RESPONSE']['object']['results']['0']['original_title'];
-        // console.log(title);
+        // poster_path, overview, title, vote_average
+        // 데이터 선언하기
+        // temp_html로 뿌려주기
+        let movies = data.results;
     })
 
     .catch(err => console.error(err));
+
+function makeMovie(movie) {
+
+    let poster_path = $('#poster_path').val();
+    let title = $('#title').val();
+    let overview = $('#overview').val();
+    let vote_average = $('#vote_average').val();
+
+
+    const card = document.makeMovie('div');
+    let temp_html = `
+        <div>
+            <div>
+                <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
+            </div>
+            <h3>${movie.title}</h3>
+            <p>${movie.overview}</p>
+            <p>⭐ ${movie.vote_average}</p>
+        </div>`;
+        $('#mycards').append(temp_html);
+
+}
+
+
+// 카드 클릭 이벤트 => 클릭 시 alert 호출
+window.onload = function () {
+    var el = document.getElementById('showMeId');
+    el.onclick = hereId;
+}
+
+function hereId() {
+    alert('아이디?');
+}
