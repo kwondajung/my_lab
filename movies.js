@@ -11,42 +11,45 @@ const options = {
 const API_KEY = "5a3488ac1342b3f9bcf2ad06969cd295";
 const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko&page=1&region=KR`;
 
+// GET 요청
 fetch(url, options)
     .then(response => response.json())
-    .then(response => console.log(response))
+    // .then(response => console.log(response))
     .then(data => {
         // 이후 데이터 처리
-        // 필요한 데이터: 제목, 줄거리, 포스터 이미지 경로, 평점
-        // poster_path, overview, title, vote_average
-        // 데이터 선언하기
-        // temp_html로 뿌려주기
-        let movies = data.results;
-    })
+        // poster_path, overview, title, vote_average 
+        // console.log(data);
+        // let title = data['results']['0']['title'];
+        // let overview = data['results']['0']['overview'];
+        // console.log(title);
+        // console.log(overview);
+        const movies = data.results;
+        const movieContainer = document.getElementById('movie-container');
+        movies.forEach(movie => {
+            const card = createMovieCard(movie);
+            movieContainer.appendChild(card);
+        });
 
+    })
     .catch(err => console.error(err));
 
-function makeMovie(movie) {
-
-    let poster_path = $('#poster_path').val();
-    let title = $('#title').val();
-    let overview = $('#overview').val();
-    let vote_average = $('#vote_average').val();
-
-
-    const card = document.makeMovie('div');
-    let temp_html = `
+// 카드 생성
+function createMovieCard(movie) {
+    const card = document.createElement('div');
+    card.className = 'movie-card';
+    card.innerHTML = `
+    <div>
         <div>
-            <div>
-                <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
-            </div>
-            <h3>${movie.title}</h3>
-            <p>${movie.overview}</p>
-            <p>⭐ ${movie.vote_average}</p>
-        </div>`;
-        $('#mycards').append(temp_html);
-
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+        </div>
+        <h3>${movie.title}</h3>
+        <p>${movie.overview}</p>
+        <span>⭐: ${movie.vote_average}</span>
+    </div>
+        `;
+     // card.addEventListener('click', () => alert(`Movie ID: ${movie.id}`));
+    return card;
 }
-
 
 // 카드 클릭 이벤트 => 클릭 시 alert 호출
 window.onload = function () {
