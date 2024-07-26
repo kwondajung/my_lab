@@ -18,7 +18,7 @@ fetch(url, options)
     .then(data => {
         // 이후 데이터 처리
         // poster_path, overview, title, vote_average 
-        // console.log(data);
+        console.log(data);
         // let title = data['results']['0']['title'];
         // let overview = data['results']['0']['overview'];
         // console.log(title);
