@@ -52,11 +52,11 @@ function createMovieCard(movie) {
 }
 
 // 카드 클릭 이벤트 => 클릭 시 alert 호출
-window.onload = function () {
-    var el = document.getElementById('showMeId');
-    el.onclick = hereId;
-}
+// window.onload = function () {
+//     var el = document.getElementById('showMeId');
+//     el.onclick = hereId;
+// }
 
-function hereId() {
-    alert('아이디?');
-}
+// function hereId() {
+//     alert('아이디?');
+// }
