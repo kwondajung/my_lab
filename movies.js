@@ -18,7 +18,7 @@ fetch(url, options)
     .then(data => {
         // 이후 데이터 처리
         // poster_path, overview, title, vote_average 
-        console.log(data);
+        // console.log(data);
         // let title = data['results']['0']['title'];
         // let overview = data['results']['0']['overview'];
         // console.log(title);
@@ -29,9 +29,25 @@ fetch(url, options)
             const card = createMovieCard(movie);
             movieContainer.appendChild(card);
         });
-
     })
     .catch(err => console.error(err));
+
+    // 검색
+    // 윈도우가 준비됐을 때
+    window.onload = function(){
+    document.getElementById('search-button').addEventListener('click', () => {
+        const query = document.getElementById('search-input').value.toLowerCase();
+        const movieCards = document.querySelectorAll('.movie-card');
+        movieCards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          if (title.includes(query)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      })
+    }
 
 // 카드 생성
 function createMovieCard(movie) {
@@ -47,7 +63,7 @@ function createMovieCard(movie) {
         <span>⭐: ${movie.vote_average}</span>
     </div>
         `;
-     // card.addEventListener('click', () => alert(`Movie ID: ${movie.id}`));
+    card.addEventListener('click', () => alert(`Movie ID: ${movie.id}`));
     return card;
 }
 
