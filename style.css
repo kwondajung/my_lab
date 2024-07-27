@@ -4,6 +4,10 @@
     line-height: 160%;
 }
 
+body{
+    margin: 0;
+    padding-top: 75px;
+}
 h3 {
     font-weight: 800;
 }
@@ -12,20 +16,52 @@ header {
     height: 100px;
     background-color: black;
     /* display: flex; */
-    flex-direction: row;
+    /* flex-direction: row; */
     /* align-items: center;
     justify-content: center; */
+    /* margin-bottom: 100px; */
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.title {
+.gnb_list{
+    list-style-type: none;
+}
+
+.gnb_list > li > a{
+    text-decoration-line: none;
+    color: white;
+}
+
+.logo {
     color: white;
     margin-left: 30px;
     width: 200px;
-    display: inline-block;
+    /* display: inline-block; */
     font-weight: 900;
+    position: absolute;
+    left: 0;
+}
+.nav {
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    width: 600px;
+}
+header > .nav, li {
+    float: left;
 }
 
-header>.search {
+header > .nav, li, a {
+    margin: 5px 15px;
+}
+
+
+
+.search {
     /* display: inline-block; */
     float: right;
     margin-right: 30px;
@@ -47,12 +83,29 @@ header>.search {
 
 .mycards {
     margin: 30px auto 30px auto;
-    background-color: white;
+    /* background-color: green; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+/* .mycards2 {
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 100px;
+    height: 500px;
+} */
+.mycards2 > img{
+    position: absolute;
+    width: 100%;
+    border-radius: 0px;
 }
 
 .movie-card {
@@ -69,6 +122,19 @@ header>.search {
     position: relative; 
 }
 
+.movie-card2 {
+    /* background-color: green; */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin: 30px;
+    /* border: 1px solid black; */
+    text-align: justify;
+
+    position: relative;
+}
+
 span {
     font-weight: 700;
     /* 하단에 텍스트 고정 */
@@ -76,7 +142,7 @@ span {
     bottom: 20px; 
 }
 
-img {
+img{
     width: auto;
     height: 400px;
     object-fit: cover;

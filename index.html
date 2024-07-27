@@ -4,36 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영화 검색 사이트</title>
+    <title>Movie Box</title>
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <script src="./movies.js"></script>
-    <header>
-        <h1 class="title">Movie Box</h1>
-        <div class="search">
-            <input type="text" id="search-input" placeholder="영화 제목을 입력하세요.">
-            <button id="search-button">검색</button>
+    
+    <!--header 꾸미기-->
+    <header id="header">
+        <div class ="inner">
+            <h1 class="logo">Movie Box</h1>
+            <nav class="nav">
+                <ul class="gnb_list">
+                    <li><a href="">최신 영화</a></li>
+                    <li><a href="">인기 영화</a></li>
+                    <li><a href="">개봉 예정 영화</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="search-input" placeholder="영화 제목을 입력하세요.">
+                <button id="search-button">검색</button>
+        </div>
         </div>
     </header>
-    <!--카드 리스트-->
-    <!-- <div class="warp">
-        <div class="mycards">
-            <div class="card" id="showMeId">
-                <div>
-                    <img
-                        src="https://i.namu.wiki/i/_2rXSKS4AcZ0YQUuJwPfnJC40Pl8c96Mb2esJnv5USdbtcbu9kCPqo1DxhCo8hA55U4WiuZNaxm0XTe0H5RnSg.webp">
-                </div>
-                <h3>영화 제목</h3>
-                <p> 줄거리</p>
-                <p>⭐</p>
-            </div>
-        </div>
-    </div> -->
 
-    <!--API에서 정보 받아오는 카드-->
+    <!-- API에서 정보 받아오는 카드 -->
+    <div>
+        <div id="movie-container2" class="mycards2">
+
+        </div>
+
+    </div>
+
     <div class="cardList">
         <div id="movie-container" class="mycards">
 
