@@ -15,11 +15,6 @@ h3 {
 header {
     height: 100px;
     background-color: black;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* align-items: center;
-    justify-content: center; */
-    /* margin-bottom: 100px; */
     width: 100%;
     z-index: 100;
     position: fixed;
@@ -59,8 +54,6 @@ header > .nav, li, a {
     margin: 5px 15px;
 }
 
-
-
 .search {
     /* display: inline-block; */
     float: right;
@@ -68,7 +61,7 @@ header > .nav, li, a {
     margin-top: 30px;
 }
 
-.search>input {
+.search > input {
     width: 300px;
 }
 
@@ -83,7 +76,6 @@ header > .nav, li, a {
 
 .mycards {
     margin: 30px auto 30px auto;
-    /* background-color: green; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -91,24 +83,31 @@ header > .nav, li, a {
     justify-content: center;
 }
 
+/* 개봉 예정작 */
 /* .mycards2 {
-    background-color: yellow;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
     margin-bottom: 100px;
     height: 500px;
-} */
-.mycards2 > img{
-    position: absolute;
-    width: 100%;
-    border-radius: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
+.movie-card2{
+    background-color: aquamarine;
+    overflow: hidden;
+}
+.movie-card2 > div{
+    position: relative;
 
-.movie-card {
+}
+.two{
+    margin-top: 100px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+} */
+
+.popular-movie-card {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -120,29 +119,19 @@ header > .nav, li, a {
     text-align: justify;
     /* 하단에 텍스트 고정 */
     position: relative; 
+    cursor: pointer;
 }
 
-.movie-card2 {
-    /* background-color: green; */
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    margin: 30px;
-    /* border: 1px solid black; */
-    text-align: justify;
 
-    position: relative;
-}
 
-span {
+.star {
     font-weight: 700;
     /* 하단에 텍스트 고정 */
     position: absolute;
     bottom: 20px; 
 }
 
-img{
+.popular-img{
     width: auto;
     height: 400px;
     object-fit: cover;
@@ -154,3 +143,4 @@ img{
 .mycards>div {
     margin: 30px;
 }
+
