@@ -63,43 +63,44 @@ function createMovieCard(movie) {
 
 
 // // 개봉 예정작 오픈 API 불러오기
-// const options2 = {
-//     method: 'GET',
-//     headers: {
-//         accept: 'application/json',
-//         Authorization: 'Bearer 5a3488ac1342b3f9bcf2ad06969cd295'
-//     }
-// };
+const options2 = {
+    method: 'GET',
+    headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer 5a3488ac1342b3f9bcf2ad06969cd295'
+    }
+};
 
 
-// // 개인 API KEY
-// const url2 = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=ko&page=1&region=KR`;
+// 개인 API KEY
+const url2 = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=ko&page=1&region=KR`;
 
-// // 개봉 예정작 GET 요청
-// fetch(url2, options2)
-//     .then(response => response.json())
-//     .then(data2 => {
-//         console.log(data2);
-//         // let title = data['results']['0']['title'];
-//         const movies2 = data2.results;
-//         const movieContainer2 = document.getElementById('movie-container2');
-//         movies2.forEach(movie2 => {
-//             const card2 = createMovieCard2(movie2);
-//             movieContainer2.appendChild(card2);
-//         });
-//     })
-//     .catch(err => console.error(err));
+// 개봉 예정작 GET 요청
+fetch(url2, options2)
+    .then(response => response.json())
+    .then(data2 => {
+        console.log(data2);
+        // let title = data['results']['0']['title'];
+        const movies2 = data2.results;
+        const movieContainer2 = document.getElementById('movie-container2');
+        movies2.forEach(movie2 => {
+            const card2 = createMovieCard2(movie2);
+            movieContainer2.appendChild(card2);
+        });
+    })
+    .catch(err => console.error(err));
 
-// // 개봉 예정작 카드 생성
-// function createMovieCard2(movie2) {
-//     const card2 = document.createElement('div');
-//     card2.className = 'movie-card2';
-//     card2.innerHTML = `
-//         <div>
-//             <img src="https://image.tmdb.org/t/p/w500${movie2.backdrop_path}" alt="${movie2.title}"  class="two">
-//         </div>
-//         <h3>${movie2.title}</h3>
-//         `;
-//     return card2;
-// }
+// 개봉 예정작 카드 생성
+function createMovieCard2(movie2) {
+    const card2 = document.createElement('div');
+    card2.className = 'movie-card2';
+    card2.innerHTML = `
+        <div>
+            <img src="https://image.tmdb.org/t/p/w500${movie2.poster_path}" alt="${movie2.title}"  class="two">
+        </div>
+        <h3>${movie2.title}</h3>
+        <p>${movie2.release_date}</p>
+        `;
+    return card2;
+}
 
