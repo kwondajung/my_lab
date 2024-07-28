@@ -4,18 +4,24 @@
     line-height: 160%;
 }
 
+.main_img{
+    width: 100%;
+    height: auto;
+}
 body{
     margin: 0;
     padding-top: 75px;
     background-color: black;
+    overflow-x: hidden;
 }
 h3 {
     font-weight: 800;
 }
 
 header {
-    height: 100px;
-    background-color: black;
+    height: 80px;
+    /* background-color: 000; */
+    backdrop-filter: saturate(180%) blur(70px);
     width: 100%;
     z-index: 100;
     position: fixed;
@@ -92,6 +98,7 @@ header > .nav, li, a {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 .movie-card2{
     /* background-color: aquamarine; */
@@ -116,22 +123,25 @@ header > .nav, li, a {
     margin-bottom: 10px;
     float: left;
     position: relative;
-    height: 400px;
+    height: 380px;
+    width: auto;
+    border-radius: 10px;
 }
 
 .popular-movie-card {
-    background-color: white;
+    /* background-color: white; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px grey;
     width: 300px;
     height: 800px;
     margin: 30px;
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: justify;
     /* 하단에 텍스트 고정 */
     position: relative; 
     cursor: pointer;
+    color: white;
 }
 
 .star {

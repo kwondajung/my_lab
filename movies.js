@@ -101,6 +101,7 @@ function createMovieCard2(movie2) {
         <h3>${movie2.title}</h3>
         <p>${movie2.release_date}</p>
         `;
+        card2.addEventListener('click', () => alert(`<${movie2.title}>의 ID는 ${movie2.id}입니다.`));
     return card2;
 }
 
