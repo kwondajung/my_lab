@@ -96,7 +96,7 @@ function createMovieCard2(movie2) {
     card2.className = 'soon-movie-card';
     card2.innerHTML = `
         <div>
-            <img src="https://image.tmdb.org/t/p/w500${movie2.poster_path}" alt="${movie2.title}"  class="two">
+            <img src="https://image.tmdb.org/t/p/w500${movie2.poster_path}" alt="${movie2.title}"  class="soon-img">
         </div>
         <h3>${movie2.title}</h3>
         <p>${movie2.release_date}</p>

@@ -27,6 +27,7 @@ header {
     left: 0;
 }
 
+/* GNB */
 .gnb_list {
     list-style-type: none;
 }
@@ -72,7 +73,7 @@ header>.nav, li, a {
     width: 300px;
 }
 
-
+/* 인기 영화 */
 .popular-body {
     display: flex;
     flex-direction: column;
@@ -91,57 +92,6 @@ header>.nav, li, a {
     width: 1700px;
     /* background-color: white; */
 
-}
-
-/* 개봉 예정작 */
-.soon-cards {
-    margin-bottom: 50px;
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-.soon-movie-card {
-    /* background-color: aquamarine; */
-    overflow: hidden;
-    transition: all 0.5s ease;
-    margin-top: 50px;
-   
-}
-
-.soon-cards>div:hover {
-    transform: scale(1.1);
-}
-
-.soon-movie-card>div {
-    position: relative;
-}
-
-.soon-movie-card>h3 {
-    color: white;
-    font-weight: 600;
-}
-
-.soon-movie-card>p {
-    color: white;
-    margin-top: -20px;
-    font-size: 14px;
-}
-
-.two {
-    margin-top: 10px;
-    margin-right: 30px;
-    margin-bottom: 10px;
-    float: left;
-    position: relative;
-    height: 380px;
-    width: auto;
-    border-radius: 10px;
-   
 }
 
 .popular-movie-card {
@@ -185,6 +135,57 @@ header>.nav, li, a {
     margin: 30px;
 }
 
+/* 개봉 예정작 */
+.soon-cards {
+    margin-bottom: 50px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.soon-cards>div:hover {
+    transform: scale(1.1);
+}
+
+.soon-movie-card {
+    /* background-color: aquamarine; */
+    overflow: hidden;
+    transition: all 0.5s ease;
+    margin-top: 50px;
+}
+
+.soon-movie-card>div {
+    position: relative;
+}
+
+.soon-movie-card>h3 {
+    color: white;
+    font-weight: 600;
+}
+
+.soon-movie-card>p {
+    color: white;
+    margin-top: -20px;
+    font-size: 14px;
+}
+
+.soon-img {
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    float: left;
+    position: relative;
+    height: 380px;
+    width: auto;
+    border-radius: 10px;
+   
+}
+
+/* top 버튼 */
 #top-btn{
     float: right;
     z-index: 999;
@@ -199,5 +200,4 @@ header>.nav, li, a {
     border: 1px solid white;
     color: white;
     line-height: 120%;
-
 }
