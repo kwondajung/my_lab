@@ -16,7 +16,6 @@ fetch(url, options)
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        // let title = data['results']['0']['title'];
         const movies = data.results;
         const movieContainer = document.getElementById('popular-movie-container');
 
@@ -43,15 +42,6 @@ document.getElementById('search-button').addEventListener('click', () => {
     });
 })
 // }
-
-// 엔터키로 검색하기
-// const input = document.querySelector('.search-input');
-// input.addEventListener('keyup', (event) => {
-//   if (event.keyCode === 13) {
-//     document.getElementById('search-btn').click();
-//   }
-// });
-
 
 // 인기 영화 카드 생성
 function createMovieCard(movie) {
@@ -88,7 +78,6 @@ fetch(url2, options2)
     .then(response => response.json())
     .then(data2 => {
         console.log(data2);
-        // let title = data['results']['0']['title'];
         const movies2 = data2.results;
         const movieContainer2 = document.getElementById('soon-movie-container');
 
@@ -115,6 +104,13 @@ function createMovieCard2(movie2) {
 }
 
 // top 버튼
-
+document.getElementById('top-btn').addEventListener('click', function () {
+    var body = document.getElementsByTagName('body')[0];
+    //창의 스크롤을 본문 최상단으로 부드럽게 이동시킵니다.
+    window.scroll({
+      behavior: 'smooth',
+      top: body.offsetTop,
+    });
+  });
 
 // 캐러셀
