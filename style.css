@@ -81,7 +81,7 @@ header>.nav, li, a {
     flex-wrap: wrap;
 }
 
-.mycards {
+.popular-cards {
     margin: 30px auto 30px auto;
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +94,7 @@ header>.nav, li, a {
 }
 
 /* 개봉 예정작 */
-.mycards2 {
+.soon-cards {
     margin-bottom: 50px;
     height: 600px;
     display: flex;
@@ -105,7 +105,7 @@ header>.nav, li, a {
     transition: all 0.5s ease;
 }
 
-.movie-card2 {
+.soon-movie-card {
     /* background-color: aquamarine; */
     overflow: hidden;
     transition: all 0.5s ease;
@@ -113,22 +113,20 @@ header>.nav, li, a {
    
 }
 
-.mycards2>div:hover {
+.soon-cards>div:hover {
     transform: scale(1.1);
 }
 
-.movie-card2>div {
+.soon-movie-card>div {
     position: relative;
-
-
 }
 
-.movie-card2>h3 {
+.soon-movie-card>h3 {
     color: white;
     font-weight: 600;
 }
 
-.movie-card2>p {
+.soon-movie-card>p {
     color: white;
     margin-top: -20px;
     font-size: 14px;
@@ -183,7 +181,7 @@ header>.nav, li, a {
     display: block;
 }
 
-.mycards>div {
+.popular-cards>div {
     margin: 30px;
 }
 

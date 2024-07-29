@@ -93,7 +93,7 @@ fetch(url2, options2)
 // 개봉 예정작 카드 생성
 function createMovieCard2(movie2) {
     const card2 = document.createElement('div');
-    card2.className = 'movie-card2';
+    card2.className = 'soon-movie-card';
     card2.innerHTML = `
         <div>
             <img src="https://image.tmdb.org/t/p/w500${movie2.poster_path}" alt="${movie2.title}"  class="two">
