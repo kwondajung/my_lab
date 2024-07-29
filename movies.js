@@ -82,7 +82,7 @@ fetch(url2, options2)
         console.log(data2);
         // let title = data['results']['0']['title'];
         const movies2 = data2.results;
-        const movieContainer2 = document.getElementById('movie-container2');
+        const movieContainer2 = document.getElementById('soon-movie-container');
         movies2.forEach(movie2 => {
             const card2 = createMovieCard2(movie2);
             movieContainer2.appendChild(card2);

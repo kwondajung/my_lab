@@ -73,7 +73,7 @@ header>.nav, li, a {
 }
 
 
-.cardList {
+.popular-body {
     display: flex;
     flex-direction: column;
     align-items: center;
