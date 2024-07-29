@@ -154,9 +154,9 @@ header>.nav, li, a {
     /* background-color: yellow; */
 }
 
-/* .soon-cards>div:hover {
+.soon-cards>div:hover {
     transform: scale(1.1);
-} */
+}
 
 .soon-movie-card {
     /* background-color: aquamarine; */
