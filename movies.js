@@ -43,6 +43,15 @@ document.getElementById('search-button').addEventListener('click', () => {
 })
 // }
 
+// 엔터키로 검색하기
+const input = document.getElementById('search-input');
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('search-button').click();
+    }
+});
+
 // 인기 영화 카드 생성
 function createMovieCard(movie) {
     const card = document.createElement('div');
@@ -108,9 +117,9 @@ document.getElementById('top-btn').addEventListener('click', function () {
     var body = document.getElementsByTagName('body')[0];
     //창의 스크롤을 본문 최상단으로 부드럽게 이동시킵니다.
     window.scroll({
-      behavior: 'smooth',
-      top: body.offsetTop,
+        behavior: 'smooth',
+        top: body.offsetTop,
     });
-  });
+});
 
 // 캐러셀
