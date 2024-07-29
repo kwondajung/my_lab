@@ -138,10 +138,10 @@ header>.nav, li, a {
 }
 
 /* 개봉 예정작 */
-/* .soon-body{
-    background-color: darkblue;
+.soon-body{
+    /* background-color: darkblue; */
     overflow: hidden;
-} */
+}
 
 .soon-cards {
     margin-bottom: 50px;
@@ -154,9 +154,9 @@ header>.nav, li, a {
     /* background-color: yellow; */
 }
 
-.soon-cards>div:hover {
+/* .soon-cards>div:hover {
     transform: scale(1.1);
-}
+} */
 
 .soon-movie-card {
     /* background-color: aquamarine; */
