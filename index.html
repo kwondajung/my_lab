@@ -24,24 +24,31 @@
                 </ul>
             </nav>
             <div class="search">
-                <input type="text" id="search-input" placeholder="영화 제목을 입력하세요." onkeyup="enterkey();"/>
+                <input type="text" id="search-input" placeholder="영화 제목을 입력하세요." onkeyup="enterkey();" />
                 <button id="search-button">검색</button>
             </div>
         </div>
     </header>
 
     <!-- API에서 정보 받아오는 카드 -->
-     <div class="main-img">
-     </div>
+    <div class="main-img">
+    </div>
     <div class="cardList2">
         <div id="movie-container2" class="mycards2">
+            
         </div>
+        <!-- <div class="slider_btn">
+            <button class="back">❮</button>
+            <button class="next">❯</button>
+        </div> -->
+            
     </div>
 
     <div class="cardList">
         <div id="popular-movie-container" class="mycards">
         </div>
     </div>
+    <button id="top-btn" onclick="toTop()">▲<br>Top</button>
 </body>
 
 </html>

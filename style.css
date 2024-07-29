@@ -4,20 +4,18 @@
     line-height: 160%;
 }
 
-.main_img{
-    width: 100%;
-    height: auto;
-}
-body{
+body {
     margin: 0;
     padding-top: 75px;
     background-color: black;
     overflow-x: hidden;
 }
+
 h3 {
     font-weight: 800;
 }
 
+/* 상단바 고정 */
 header {
     height: 80px;
     /* background-color: 000; */
@@ -29,11 +27,11 @@ header {
     left: 0;
 }
 
-.gnb_list{
+.gnb_list {
     list-style-type: none;
 }
 
-.gnb_list > li > a{
+.gnb_list>li>a {
     text-decoration-line: none;
     color: white;
 }
@@ -47,17 +45,19 @@ header {
     position: absolute;
     left: 0;
 }
+
 .nav {
     position: absolute;
     left: 200px;
     top: 20px;
     width: 600px;
 }
-header > .nav, li {
+
+header>.nav, li {
     float: left;
 }
 
-header > .nav, li, a {
+header>.nav, li, a {
     margin: 5px 10px;
 }
 
@@ -68,7 +68,7 @@ header > .nav, li, a {
     margin-top: 30px;
 }
 
-.search > input {
+.search>input {
     width: 300px;
 }
 
@@ -88,12 +88,14 @@ header > .nav, li, a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
+    width: 1700px;
+    /* background-color: white; */
+
 }
 
 /* 개봉 예정작 */
 .mycards2 {
-    /* margin-bottom: 50px; */
+    margin-bottom: 50px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
@@ -101,32 +103,39 @@ header > .nav, li, a {
     align-items: center;
     cursor: pointer;
     transition: all 0.5s ease;
-    
 }
-.movie-card2{
+
+.movie-card2 {
     /* background-color: aquamarine; */
     overflow: hidden;
     transition: all 0.5s ease;
+    margin-top: 50px;
+   
 }
-.mycards2 >div:hover{
+
+.mycards2>div:hover {
     transform: scale(1.1);
 }
-.movie-card2 > div{
+
+.movie-card2>div {
     position: relative;
 
+
 }
-.movie-card2 > h3{
+
+.movie-card2>h3 {
     color: white;
     font-weight: 600;
 }
 
-.movie-card2  > p{
+.movie-card2>p {
     color: white;
     margin-top: -20px;
     font-size: 14px;
 }
-.two{
-    margin-top: 100px;
+
+.two {
+    margin-top: 10px;
     margin-right: 30px;
     margin-bottom: 10px;
     float: left;
@@ -134,6 +143,7 @@ header > .nav, li, a {
     height: 380px;
     width: auto;
     border-radius: 10px;
+   
 }
 
 .popular-movie-card {
@@ -147,22 +157,24 @@ header > .nav, li, a {
     border: 1px solid white;
     text-align: justify;
     /* 하단에 텍스트 고정 */
-    position: relative; 
+    position: relative;
     cursor: pointer;
     color: white;
     transition: all 0.5s ease;
 }
-.popular-movie-card:hover{
+
+.popular-movie-card:hover {
     transform: scale(1.1);
 }
+
 .star {
     font-weight: 700;
     /* 하단에 텍스트 고정 */
     position: absolute;
-    bottom: 20px; 
+    bottom: 20px;
 }
 
-.popular-img{
+.popular-img {
     width: auto;
     height: 400px;
     object-fit: cover;
@@ -173,4 +185,21 @@ header > .nav, li, a {
 
 .mycards>div {
     margin: 30px;
+}
+
+#top-btn{
+    float: right;
+    z-index: 999;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color:black;
+    border: 1px solid white;
+    color: white;
+    line-height: 120%;
+
 }
