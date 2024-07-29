@@ -141,6 +141,7 @@ header>.nav, li, a {
 .soon-body{
     /* background-color: darkblue; */
     overflow: hidden;
+    width: 100%;
 }
 
 .soon-cards {
@@ -154,9 +155,9 @@ header>.nav, li, a {
     /* background-color: yellow; */
 }
 
-/* .soon-cards>div:hover {
+.soon-cards>div:hover {
     transform: scale(1.1);
-} */
+}
 
 .soon-movie-card {
     /* background-color: aquamarine; */
@@ -218,7 +219,7 @@ header>.nav, li, a {
     text-align: center;
 }
 
-.back-btn{
+.prev-btn{
     cursor: pointer;
     margin: 10px;
 }

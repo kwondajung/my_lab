@@ -19,6 +19,7 @@ fetch(url, options)
         // let title = data['results']['0']['title'];
         const movies = data.results;
         const movieContainer = document.getElementById('popular-movie-container');
+
         movies.forEach(movie => {
             const card = createMovieCard(movie);
             movieContainer.appendChild(card);
@@ -28,20 +29,29 @@ fetch(url, options)
 
 // 검색
 // 윈도우가 준비됐을 때 해당 함수 실행
-window.onload = function () {
-    document.getElementById('search-button').addEventListener('click', () => {
-        const query = document.getElementById('search-input').value.toLowerCase();
-        const movieCards = document.querySelectorAll('.popular-movie-card');
-        movieCards.forEach(card => {
-            const title = card.querySelector('h3').textContent.toLowerCase();
-            if (title.includes(query)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    })
-}
+// window.onload = function () {
+document.getElementById('search-button').addEventListener('click', () => {
+    const query = document.getElementById('search-input').value.toLowerCase();
+    const movieCards = document.querySelectorAll('.popular-movie-card');
+    movieCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(query)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+})
+// }
+
+// 엔터키로 검색하기
+// const input = document.querySelector('.search-input');
+// input.addEventListener('keyup', (event) => {
+//   if (event.keyCode === 13) {
+//     document.getElementById('search-btn').click();
+//   }
+// });
+
 
 // 인기 영화 카드 생성
 function createMovieCard(movie) {
@@ -61,7 +71,6 @@ function createMovieCard(movie) {
     return card;
 }
 
-
 // // 개봉 예정작 오픈 API 불러오기
 const options2 = {
     method: 'GET',
@@ -70,7 +79,6 @@ const options2 = {
         Authorization: 'Bearer 5a3488ac1342b3f9bcf2ad06969cd295'
     }
 };
-
 
 // 개인 API KEY
 const url2 = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=ko&page=1&region=KR`;
@@ -83,6 +91,7 @@ fetch(url2, options2)
         // let title = data['results']['0']['title'];
         const movies2 = data2.results;
         const movieContainer2 = document.getElementById('soon-movie-container');
+
         movies2.forEach(movie2 => {
             const card2 = createMovieCard2(movie2);
             movieContainer2.appendChild(card2);
@@ -101,30 +110,11 @@ function createMovieCard2(movie2) {
         <h3>${movie2.title}</h3>
         <p>${movie2.release_date}</p>
         `;
-        card2.addEventListener('click', () => alert(`<${movie2.title}>의 ID는 ${movie2.id}입니다.`));
+    card2.addEventListener('click', () => alert(`<${movie2.title}>의 ID는 ${movie2.id}입니다.`));
     return card2;
 }
 
 // top 버튼
 
-$(document).ready(function() { 
 
-    // Top 버튼 특정 스크롤높이에서만 보이기 / 숨기기
-    $(window).scroll(function(){
-    	if($(this).scrollTop() > 100){
-        	$('#top-btn').fadeIn();
-        }else{
-        	$('#top-btn').fadeOut();
-        }
-    });
-    
-    // Top 버튼 클릭시 페이지 상단으로 이동
-   	$('#top-btn').click(function (){
-    	$('body').animate({scrollTop : 0}, 800);
-        return false;
-    });
-    
- });
-
-
- // 이미지 좌우 슬라이드
+// 캐러셀

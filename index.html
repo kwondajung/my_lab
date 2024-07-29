@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <script src="./movies.js"></script>
+  
 
     <!-- GNB -->
     <header id="header">
@@ -24,23 +24,24 @@
                 </ul>
             </nav>
             <div class="search">
-                <input type="text" id="search-input" placeholder="영화 제목을 입력하세요." onkeyup="enterkey();" />
+                <!-- <form class="search-form"> -->
+                <input type="text" id="search-input" placeholder="영화 제목을 입력하세요." onkeyup="enterkey()"/>
                 <button id="search-button">검색</button>
+            <!-- </form> -->
             </div>
         </div>
     </header>
 
     <!-- API에서 정보 받아오는 카드 -->
-    <div class="main-img">
-    </div>
-    <div class="soon-body" aria-live="polite">
-        <div id="soon-movie-container" class="soon-cards">
-            
+    <div class="soon-body">
+        <div class="slide-box">
+            <div id="soon-movie-container" class="soon-cards">
+            </div>
         </div>
-        <div class="slider-btn">
-            <button class="prevBtn">❮</button>
-            <button class="nextBtn">❯</button>
-        </div>
+        <!-- <div class="slider-btn">
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div> -->
     </div>
 
     <div class="popular-body">
@@ -49,5 +50,5 @@
     </div>
     <button id="top-btn" onclick="toTop()">▲<br>Top</button>
 </body>
-
+<script src="./movies.js"></script>
 </html>
