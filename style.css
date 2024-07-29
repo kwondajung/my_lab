@@ -8,7 +8,8 @@ body {
     margin: 0;
     padding-top: 75px;
     background-color: black;
-    overflow-x: hidden;
+    /* 가로 스크롤 없애기 */
+    /* overflow-x: hidden; */
 }
 
 h3 {
@@ -80,6 +81,7 @@ header>.nav, li, a {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    /* background-color: brown; */
 }
 
 .popular-cards {
@@ -95,7 +97,7 @@ header>.nav, li, a {
 }
 
 .popular-movie-card {
-    /* background-color: white; */
+    /* background-color: green; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px grey;
@@ -136,6 +138,11 @@ header>.nav, li, a {
 }
 
 /* 개봉 예정작 */
+/* .soon-body{
+    background-color: darkblue;
+    overflow: hidden;
+} */
+
 .soon-cards {
     margin-bottom: 50px;
     height: 600px;
@@ -143,19 +150,19 @@ header>.nav, li, a {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
     transition: all 0.5s ease;
+    /* background-color: yellow; */
 }
 
-.soon-cards>div:hover {
+/* .soon-cards>div:hover {
     transform: scale(1.1);
-}
+} */
 
 .soon-movie-card {
     /* background-color: aquamarine; */
-    overflow: hidden;
     transition: all 0.5s ease;
     margin-top: 50px;
+    cursor: pointer;
 }
 
 .soon-movie-card>div {
@@ -200,4 +207,22 @@ header>.nav, li, a {
     border: 1px solid white;
     color: white;
     line-height: 120%;
+}
+
+/* 이미지 슬라이드 버튼*/
+.slider-btn{
+    /* background-color: palevioletred; */
+    width: 100px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.back-btn{
+    cursor: pointer;
+    margin: 10px;
+}
+
+.next-btn{
+    cursor: pointer;
 }
