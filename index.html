@@ -10,8 +10,6 @@
 </head>
 
 <body>
-  
-
     <!-- GNB -->
     <header id="header">
         <div class="inner">
@@ -24,26 +22,62 @@
                 </ul>
             </nav>
             <div class="search">
-                <!-- <form class="search-form"> -->
                 <input type="text" id="search-input" placeholder="영화 제목을 입력하세요." onkeyup="enterkey()"/>
                 <button id="search-button">검색</button>
-            <!-- </form> -->
             </div>
         </div>
     </header>
 
-    <!-- API에서 정보 받아오는 카드 -->
+    <!-- 캐러셀 테스트 -->
+    <section>
+        <div id="banner" class="swiper-container banner">
+            <div class="main01-nav">
+                <button type="button" class="btn-pause"></button>
+                <!-- 페이지네이션 버튼 -->
+                <div calss="swiper-pagination swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullets"></span>
+                    <span class="swiper-pagination-bullets"></span>
+                    <span class="swiper-pagination-bullets"></span>
+                    <span class="swiper-pagination-bullets"></span>
+                </div>
+            </div>
+            <!-- 페이지 화살표 버튼 -->
+             <button type="button" class="swiper-button-prev" tabindex="0">이전</button>
+             <button type="button" class="swiper-button-next" tabindex="0">다음</button>
+             <!-- swiper -->
+              <div class="swiper-wrapper-banner">
+                <div class="swiper-slide">
+                    <img src="https://image.tmdb.org/t/p/original/etj8E2o0Bud0HkONVQPjyCkIvpv.jpg" alt="/" />
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="https://image.tmdb.org/t/p/original/10mvZdPGxwZcPcmkJYtuyiIYvY.jpg" alt="/" /> -->
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="https://image.tmdb.org/t/p/original/cJ5h0tBjGFYWh8kAWqfcl8JKAhv.jpg" alt="/" /> -->
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="https://image.tmdb.org/t/p/original/Aa9TLpNpBMyRkD8sPJ7ACKLjt0l.jpg" alt="/" /> -->
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="https://image.tmdb.org/t/p/original/r5eDsfdzo4KuePfG7IVf5tDSoBx.jpg" alt="/" /> -->
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="https://image.tmdb.org/t/p/original/4OBMHVP4Rjwn2DHoY80O31Hg3u0.jpg" alt="/" /> -->
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <!-- 개봉 예정작 -->
     <div class="soon-body">
         <div class="slide-box">
+            <h1>개봉 예정작</h1>
             <div id="soon-movie-container" class="soon-cards">
             </div>
         </div>
-        <!-- <div class="slider-btn">
-            <button class="prev-btn">❮</button>
-            <button class="next-btn">❯</button>
-        </div> -->
     </div>
 
+    <!-- 인기 영화 -->
     <div class="popular-body">
         <div id="popular-movie-container" class="popular-cards">
         </div>

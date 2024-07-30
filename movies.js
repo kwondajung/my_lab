@@ -121,5 +121,3 @@ document.getElementById('top-btn').addEventListener('click', function () {
         top: body.offsetTop,
     });
 });
-
-// 캐러셀
