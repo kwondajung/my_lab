@@ -28,7 +28,7 @@ fetch(url, options)
 
 // 검색
 // 윈도우가 준비됐을 때 해당 함수 실행
-// window.onload = function () {
+window.onload = function () {
 document.getElementById('search-button').addEventListener('click', () => {
     const query = document.getElementById('search-input').value.toLowerCase();
     const movieCards = document.querySelectorAll('.popular-movie-card');
@@ -41,7 +41,7 @@ document.getElementById('search-button').addEventListener('click', () => {
         }
     });
 })
-// }
+}
 
 // 엔터키로 검색하기
 const input = document.getElementById('search-input');
@@ -138,13 +138,14 @@ let currentIndex = 1;
 
 // 슬라이드가 배치되는 위치를 조정
 function updateSliderPosition() {
-    sliderWrapper.style.transform = `translateX(${-size * currentIndex + 190
-        }px`;
+    sliderWrapper.style.transform = `translateX(${-size * currentIndex + 0
+        }px`; // 190
 }
 
 // bullet에 따라 인덱스를 조정
 function updatePagination(){
-    pagination.querySelectorAll(".swiper-pagenation-bullet")
+    pagination
+    .querySelectorAll(".swiper-pagination-bullet")
     .forEach((bullet, index) => {
         bullet.classList.toggle("active", index === currentIndex);
     });
@@ -179,7 +180,7 @@ window.addEventListener("resize", function(){
     slideWidth = slides[0].offsetWidth;
     // 업데이트된 slideWidth 값을 확인하고 아래 함수를 호출해서 새너비를 기준으로 슬라이드 위치를 변경
     updateSliderPosition();
-})
+});
 
 // 슬라이드 무한 루프를 위해 마지막 슬라이드에 도달했을 때, 인덱스가 조정
 // 슬라이드 무한 루프를 위해
@@ -195,7 +196,7 @@ sliderWrapper.addEventListener("transitioned", () => {
         // translateX는 가로 이동 시 사용
         // -size * currentIndex는 현재 슬라이드의 위치이며, currentIndex[1]의 값이 190px 오프셋 위치에서 시작하기
         sliderWrapper.style.transform = `translateX(${
-            -size * currentIndex + 190
+            -size * currentIndex + 190 //원래 190이었음
         }px)`;
         }
         // 첫 번째 인덱스일 경우
@@ -204,17 +205,17 @@ sliderWrapper.addEventListener("transitioned", () => {
             currentIndex = slides.length -2;
             sliderWrapper.style.transition ="0s";
             sliderWrapper.style.transform = `translateX(${
-                -size * currentIndex + 190
+                -size * currentIndex + 190 // 원래 190이었음
             }px)`;
         }
 });
 
 // 버튼 및 bullet을 이용한 컨텐츠 이동
-prevBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
-nextBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
 
 pagination
-.querySelectorAll(".swiper-paination-bullet")
+.querySelectorAll(".swiper-pagination-bullet")
 .forEach((bullet, index) => {
     bullet.addEventListener("click", () => goToSlide(index));
 });
