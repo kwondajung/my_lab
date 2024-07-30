@@ -247,7 +247,8 @@ a {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    /* background-color: blue */
+    /* background-color: blue; */
+    z-index: 999;
 }
 
 /* .main01-nav button[class^="btn"] {
@@ -335,6 +336,7 @@ a {
     width: 100%;
     object-fit: cover;
     position: absolute;
+  
 }
 
 .swiper-wrapper-banner {
