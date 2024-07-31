@@ -20,7 +20,6 @@ h3 {
 /* 상단바 고정 */
 header {
     height: 80px;
-    /* background-color: 000; */
     backdrop-filter: saturate(180%) blur(70px);
     width: 100%;
     z-index: 100;
@@ -43,7 +42,6 @@ header {
     color: white;
     margin-left: 30px;
     width: 200px;
-    /* display: inline-block; */
     font-weight: 900;
     position: absolute;
     left: 0;
@@ -68,7 +66,6 @@ a {
 }
 
 .search {
-    /* display: inline-block; */
     float: right;
     margin-right: 30px;
     margin-top: 30px;
@@ -85,7 +82,6 @@ a {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* background-color: brown; */
     position: relative;
 }
 
@@ -97,13 +93,11 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* background-color: white; */
 
 
 }
 
 .popular-movie-card {
-    /* background-color: green; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px grey;
@@ -145,7 +139,6 @@ a {
 
 /* 개봉 예정작 */
 .soon-body {
-    /* background-color: darkblue; */
     overflow: hidden;
     width: 100%;
     position: relative;
@@ -165,7 +158,6 @@ a {
     flex-direction: column;
     align-items: center;
     transition: all 0.5s ease;
-    /* background-color: yellow; */
     position: relative;
     transition: 300ms all ease-in;
 }
@@ -175,7 +167,6 @@ a {
 }
 
 .soon-movie-card {
-    /* background-color: aquamarine; */
     transition: all 0.5s ease;
     /* margin-top: 50px; */
     cursor: pointer;
@@ -282,10 +273,6 @@ a {
     opacity: 1;
 }
 
-/* .swiper-pagination-bullet {
-    background: #e8e8e8;
-} */
-
 .swiper-pagination-bullet{
     width: 10px;
     height: 10px;
@@ -314,7 +301,6 @@ a {
 
 .swiper-button-next {
 right: 0;
-/* background: url(../images/arrow_forward_ios.png); */
 }
 
 
