@@ -313,8 +313,10 @@ a {
 }
 
 .swiper-button-next {
-    right: 0;
+right: 0;
+/* background: url(../images/arrow_forward_ios.png); */
 }
+
 
 .swiper-slide {
     transform: translateX(0);
